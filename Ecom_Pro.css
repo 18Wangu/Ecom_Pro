@@ -1,6 +1,25 @@
 body{
+    background-color: rgb(0, 5, 25);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    padding-top: 20px;
+}
+h1{
     color: white;
-    background-color: black;
-    text-align: center;
-    padding-top: 200px;
+    font-size: 2em;
+}
+li a{
+    color: white;
+    text-decoration: none;
+    margin: 40px;
+}
+li a:hover{
+    color: #dcb47c;
+    text-decoration: underline #dcb47c;
 }
