@@ -13,7 +13,7 @@ nav{
     justify-content: space-between;
     padding: 30px 150px 30px 150px;
     width: 100%;
-    background-color: blue; /* Réussir à garder le menu fixé en haut de la page lorsque l'on descent */
+    background-color: rgb(0, 5, 25); 
 }
 ul{
     list-style-type: none;
@@ -73,4 +73,27 @@ strong{
 .btn a:hover{
     color: #dcb47c;
     transition: all 0.3s ease-out;
+}
+/******************************** Page 2 ********************************/
+.five_w{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px 150px 0px 150px;
+}
+.bulle{
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    width: 375px;
+}
+h2{
+    color: #eac28c;
+    font-size: 27px;
+    padding-bottom: 20px;
+}
+p{
+    color: white;
+    font-size: 20px;
 }
