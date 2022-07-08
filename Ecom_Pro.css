@@ -254,7 +254,7 @@ strong{
     color: #000726;
     font-size: 20px;
 }
-/******************************** Page 6 ********************************/
+/******************************** Page 7 ********************************/
 #faq{
     margin-top: -190px;
     padding: 0px 150px 0px 150px;
@@ -263,11 +263,12 @@ strong{
     color: white;
     font-size: 90px;
     margin-left: -1030px;
+    margin-bottom: 30px;
 }
 .afficher_au_clic h2{
     color: #dcb47c;
     font-size: 25px;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 .afficher_au_clic p{
     color: white;
@@ -278,11 +279,57 @@ strong{
     display: flex;
 }
 .plus span{
-    padding: 3px 8px 0px 8px; /*taille du bouton à revoir */
-    margin-top: -2px;
-    margin-right: 10px;
+    padding: 3px 8px 0px 8px; 
+    margin: 0px 10px 13px 0px;
     color: white;
     font-weight: bold;
     border: 1px solid #dcb47c;
     background-color: #dcb47c;
 }
+#faq h3{
+    color: white;
+    font-size: 71px;
+    text-align: center;
+    padding: 35px;
+}
+#faq .btn{
+    margin: 0px 520px 80px 520px;
+}
+/******************************** Page 8 ********************************/
+.goal{
+    background-color: #e9e9e9;
+    margin-top: -180px;
+    padding: 0px 150px 0px 150px;
+}
+.goal h1{
+    color: #2275ff;
+    font-size: 80px;
+    margin-left: -40px;
+}
+.goal h2{
+    color: #000726;
+    font-size: 41px;
+}
+.goal p{
+    color: #000726;
+    font-size: 20px;
+    padding-top: 50px;
+}
+/******************************** Page 9 ********************************/
+#temoignages{
+    background-color: #e9e9e9;
+    margin-top: -80px;
+    padding: 0px 150px 0px 150px;
+}
+#temoignages h1{
+    color: #2275ff;
+    font-size: 80px;
+    margin-left: -470px;
+}
+#temoignages h2{
+    color: #000726;
+    font-size: 41px;
+    margin-top: -10px;
+    padding-bottom: 500px; /* pour laisser de la place au futur témoignages */
+}
+/******************************** Page 10 ********************************/
