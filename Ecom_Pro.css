@@ -77,6 +77,28 @@ strong{
     color: #000726;
     transition: all 0.3s ease-out;
 }
+/******************************** Page 1 - Responsive ********************************/
+@media screen and (max-width: 450px){
+    .page1{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    h1{
+        margin-top: -420px;
+    }
+    .btn{
+        margin: 25px 120px 0px 120px;
+    }
+    .title{
+        position: absolute;
+    }
+    .Staan{
+        position: relative;
+        z-index: -5;
+        opacity: 0;
+    }
+}
 /******************************** Page 2 ********************************/
 .five_w{
     display: flex;
@@ -100,6 +122,16 @@ strong{
     color: #000726;
     font-size: 20px;
 }
+/******************************** Page 2 - Responsive ********************************/
+@media screen and (max-width: 450px){
+    .five_w{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: -170px;
+        padding: 0px 30px 0px 30px;
+    }
+}
 /******************************** Page 3 ********************************/
 .votre_reve{
     text-align: center;
@@ -117,6 +149,13 @@ strong{
 .votre_reve .btn{
     margin-right: 500px;
     margin-left: 500px;
+}
+/******************************** Page 3 - Responsive ********************************/
+@media screen and (max-width: 450px){
+    .votre_reve{
+        text-align: center;
+        padding: 70px 30px 0px 30px;
+    }
 }
 /******************************** Page 4 ********************************/
 #avantages{
@@ -153,6 +192,19 @@ strong{
     color: #000726;
     font-size: 20px;
 }
+/******************************** Page 4 - Responsive ********************************/
+@media screen and (max-width: 450px){
+    #avantages{
+        margin-top: -15px;
+        padding: 0px 30px 0px 30px;
+    }
+    #avantages h1{
+        color: #2275ff;
+        font-size: 53px;
+        margin-top: -250px;
+        margin-left: 0px;
+    }
+}
 /******************************** Page 5 ********************************/
 #page_formateur{
     display: flex;
@@ -180,6 +232,7 @@ strong{
     font-size: 50px;
     margin-top: -290px;
     margin-left: -620px;
+    text-shadow: 1px 1px #e9e9e9;
     animation: apparition 1s ease-out; /* Voir javascript pour lancer l'animation au scroll*/
 }
 .animation_formateur h2{
@@ -197,6 +250,42 @@ strong{
     to{
         opacity: 1;
         transform: translatex(0px);
+    }
+}
+/******************************** Page 5 - Responsive ********************************/
+@media screen and (max-width: 450px){
+    #page_formateur{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 50px 30px 0px 30px;
+    }
+    #page_formateur h1{
+        color: #2275ff;
+        font-size: 27px;
+        padding-top: 570px;
+        padding-bottom: 25px;
+    }
+    #page_formateur p{
+        color: #000726;
+        font-size: 20px;
+    }
+    .Staan_formateur{
+        width: 400px;
+    }
+    .animation_formateur{
+        padding: -50px 0px 0px 0px;
+    }
+    .animation_formateur h1{
+        color: #000726;
+        font-size: 28px;
+        margin-top: -1163px;
+        margin-left: -155px; /* va tr faire foutre, ça veut pas ce mettre sur une ligne. ENCULER*/
+        text-shadow: 1px 1px #e9e9e9;
+    }
+    .animation_formateur h2{
+        color: #2275ff;
+        font-size: 25px;
+        margin-left: -110px;
     }
 }
 /******************************** Page 6 ********************************/
@@ -250,6 +339,40 @@ strong{
     color: #000726;
     font-size: 20px;
 }
+/******************************** Page 6 - Responsive ********************************/
+@media screen and (max-width: 450px){
+    #programme{
+        margin-top: 1070px;
+        padding: 0px 30px 10px 30px;
+    }
+    #programme h1{
+        color: #2275ff;
+        font-size: 50px;
+        margin-left: 0px;
+    }
+    #programme h2{
+        color: #000726;
+        font-size: 33px;
+        margin: 25px 0px 10px 0px;
+    }
+    #programme h3{
+        color: #000726;
+        font-size: 15px;
+        font-weight: normal;
+        margin-bottom: 15px;
+    }
+    .puce span{
+        padding: 3px 8px 3px 8px;
+        margin-bottom: 40px;
+        margin-top: -2px;
+        margin-right: 10px;
+        color: white;
+        font-weight: bold;
+        border: 1px solid #2275ff;
+        border-radius: 50%;
+        background-color: #2275ff;
+    }
+}
 /******************************** Page 7 ********************************/
 #faq{
     margin-top: -190px;
@@ -290,6 +413,25 @@ strong{
 }
 #faq .btn{
     margin: 0px 520px 80px 520px;
+}
+/******************************** Page 7 - Responsive ********************************/
+@media screen and (max-width: 450px){
+    #faq{
+        padding: 0px 30px 0px 30px;
+    } 
+    #faq h1{
+        color: #000726;
+        font-size: 90px;
+        margin: 0px 0px 30px 0px;
+    }
+    .plus span{
+        padding: 3px 8px 0px 8px; 
+        margin: 0px 10px 90px 0px;
+        color: white;
+        font-weight: bold;
+        border: 1px solid #2275ff;
+        background-color: #2275ff;
+    }
 }
 /******************************** Page 8 ********************************/
 .goal{
