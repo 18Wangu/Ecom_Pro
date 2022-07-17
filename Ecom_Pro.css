@@ -432,6 +432,15 @@ strong{
         border: 1px solid #2275ff;
         background-color: #2275ff;
     }
+    #faq h3{
+        color: #000726;
+        font-size: 50px;
+        text-align: center;
+        padding: 30px;
+    }
+    #faq .btn{
+        margin: 0px 80px 230px 80px;
+    }
 }
 /******************************** Page 8 ********************************/
 .goal{
@@ -452,6 +461,23 @@ strong{
     font-size: 20px;
     padding-top: 50px;
 }
+/******************************** Page 8 - Responsive ********************************/
+@media screen and (max-width: 450px){
+    .goal{
+        margin-top: -180px;
+        padding: 0px 30px 200px 30px;
+    }
+    .goal h1{
+        color: #2275ff;
+        font-size: 45px;
+        margin-left: 0px;
+    }
+    .goal h2{
+        color: #000726;
+        font-size: 30px;
+        text-align: center;
+    }
+}
 /******************************** Page 9 ********************************/
 #temoignages{
     margin-top: -80px;
@@ -467,6 +493,24 @@ strong{
     font-size: 41px;
     margin-top: -10px;
     padding-bottom: 500px; /* pour laisser de la place au futur témoignages */
+}
+/******************************** Page 9 - Responsive ********************************/
+@media screen and (max-width: 450px){
+    #temoignages{
+        margin-top: 0px;
+        padding: 0px 30px 0px 30px;
+    }
+    #temoignages h1{
+        color: #2275ff;
+        font-size: 50px;
+        margin-left: 0px;
+    }
+    #temoignages h2{
+        color: #000726;
+        font-size: 30px;
+        text-align: center;
+        padding-bottom: 380px; /* pour laisser de la place au futur témoignages */
+    }
 }
 /******************************** Page 10 ********************************/
 #reseaux{
@@ -516,4 +560,49 @@ strong{
 .btn_reseau a:hover{
     color: #000726;
     transition: all 0.3s ease-out;
+}
+/******************************** Page 10 - Responsive ********************************/
+@media screen and (max-width: 450px){
+    #reseaux{
+        padding: 0px 30px 0px 30px;
+    }
+    #reseaux h1{
+        color: #2275ff;
+        font-size: 50px;
+        margin-left: 0px;
+    }
+    #reseaux h2{
+        color: #000726;
+        font-size: 30px;
+        text-align: center;
+        margin-top: 15px;
+        padding-bottom: 250px;
+    }
+    .reseaux_sociaux{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .reseaux_sociaux h3{
+        padding-bottom: 10px;
+        color: #2275ff;
+        font-size: 27px;
+        text-align: center;
+        margin-top: -270px;
+    }
+    .reseaux_sociaux p{
+        color: #000726;
+        font-size: 20px;
+        padding-bottom: 5px;
+        text-align: center;
+    }
+    .btn_reseau{
+        border: 1px solid #2275ff;
+        padding: 15px;
+        text-align: center;
+        background-color: #2275ff;
+        box-shadow: 3px 3px 15px #2275ff, 3px 3px 15px #2275ff;
+        margin-right: 50px;
+        margin-left: 50px;
+    }
 }
