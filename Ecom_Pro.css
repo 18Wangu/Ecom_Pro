@@ -8,6 +8,8 @@ html{
 }
 body{
     background-color: #e9e9e9;
+    padding-left: 6%;
+    padding-right: 6%;
     font-family: 'Archivo narrow', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 /******************************** Barre de navigation ********************************/
@@ -15,7 +17,7 @@ nav{
     position: fixed;
     display: flex;
     justify-content: space-between;
-    padding: 30px 150px 30px 150px;
+    padding: 30px 150px 30px 0px;
     width: 100%;
     background-color: #e9e9e9; 
 }
@@ -46,7 +48,11 @@ li a:hover{
 .page1{
     display: flex;
     justify-content: space-around;
-    padding: 30px 150px 0px 150px;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .Staan{
     padding-top: 100px;
@@ -63,7 +69,9 @@ strong{
 .btn{
     background-color: #2275ff;
     padding: 15px;
-    margin: 25px 250px 0px 250px;
+    max-width: max-content;
+    min-width: max-content;
+    margin-top: 25px;
     text-align: center;
     box-shadow: 3px 3px 15px #2275ff, 3px 3px 15px #2275ff;
 }
@@ -78,11 +86,17 @@ strong{
     transition: all 0.3s ease-out;
 }
 /******************************** Page 1 - Responsive ********************************/
-@media screen and (max-width: 450px){
+/* Telephone et Tablette */
+@media screen and (max-width: 775px){
+    /* temporaire(a enlever apres nav buger faite */
+    nav{
+        opacity: 0;
+    }
+    /* */
     .page1{
         display: flex;
         flex-direction: column;
-        padding: 0;
+        align-items: center;
     }
     h1{
         margin-top: -420px;
@@ -103,8 +117,7 @@ strong{
 .five_w{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 30px 150px 0px 150px;
+    justify-content: space-around;
 }
 .bulle{
     border: 1px solid #2275ff;
@@ -123,19 +136,31 @@ strong{
     font-size: 20px;
 }
 /******************************** Page 2 - Responsive ********************************/
+/* Telephone */
 @media screen and (max-width: 450px){
     .five_w{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin-top: -170px;
-        padding: 0px 30px 0px 30px;
+        margin-top: -150px;
+    }
+}
+/* Tablette */
+@media screen and (min-width: 451px) and (max-width: 775px){
+    .five_w{
+        margin-top: -200px;
+    }
+    .bulle{
+        border: 1px solid #2275ff;
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 30px;
+        width: 320px;
     }
 }
 /******************************** Page 3 ********************************/
 .votre_reve{
     text-align: center;
-    padding: 200px 150px 200px 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .votre_reve h2{
     color: #2275ff;
@@ -146,37 +171,25 @@ strong{
     color: #000726;
     font-size: 20px;
 }
-.votre_reve .btn{
-    margin-right: 500px;
-    margin-left: 500px;
-}
 /******************************** Page 3 - Responsive ********************************/
-@media screen and (max-width: 450px){
-    .votre_reve{
-        text-align: center;
-        padding: 70px 30px 0px 30px;
-    }
-}
 /******************************** Page 4 ********************************/
 #avantages{
-    margin-top: -15px;
-    padding: 0px 150px 0px 150px;
+    margin-top: -200px;
 }
 #avantages h1{
     color: #2275ff;
     font-size: 90px;
-    margin-top: -200px;
-    margin-left: -660px;
+    text-align: left;
 }
 #avantages h2{
     color: #000726;
     font-size: 41px;
-    margin: -5px 0px 30px 18px;
+    text-align: left;
 }
 .six_avantages{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .paragraphe{
     padding: 20px;
@@ -193,26 +206,39 @@ strong{
     font-size: 20px;
 }
 /******************************** Page 4 - Responsive ********************************/
+/* Telephone */
 @media screen and (max-width: 450px){
     #avantages{
-        margin-top: -15px;
-        padding: 0px 30px 0px 30px;
+        margin-top: 200px;
     }
     #avantages h1{
         color: #2275ff;
         font-size: 53px;
-        margin-top: -250px;
-        margin-left: 0px;
+    }
+    .paragraphe{
+        width: 375px;
+    }
+}
+/* Tablette */
+@media screen and (min-width: 451px) and (max-width: 775px){
+    #avantages{
+        margin-top: 200px;
+    }
+    #avantages h1{
+        color: #2275ff;
+        font-size: 53px;
+    }
+    .paragraphe{
+        width: 320px;
     }
 }
 /******************************** Page 5 ********************************/
 #page_formateur{
     display: flex;
     justify-content: space-between;
-    padding: 100px 150px 0px 150px;
 }
-.Staan_formateur{
-    padding-right: 40px;
+.Staan_formateur{ /* utiliser stiky + relative + absolute pour conserver "je serai votre formateur sous l'image de staan */
+    width: 600px;
 }
 #page_formateur h1{
     color: #2275ff;
@@ -253,8 +279,9 @@ strong{
     }
 }
 /******************************** Page 5 - Responsive ********************************/
-@media screen and (max-width: 450px){
+@media screen and (max-width: 775px){
     #page_formateur{
+        opacity: 0;
         display: flex;
         flex-wrap: wrap;
         padding: 50px 30px 0px 30px;
@@ -340,8 +367,9 @@ strong{
     font-size: 20px;
 }
 /******************************** Page 6 - Responsive ********************************/
-@media screen and (max-width: 450px){
+@media screen and (max-width: 775px){
     #programme{
+        opacity: 0;
         margin-top: 1070px;
         padding: 0px 30px 10px 30px;
     }
@@ -415,8 +443,9 @@ strong{
     margin: 0px 520px 80px 520px;
 }
 /******************************** Page 7 - Responsive ********************************/
-@media screen and (max-width: 450px){
+@media screen and (max-width: 775px){
     #faq{
+        opacity: 0;
         padding: 0px 30px 0px 30px;
     } 
     #faq h1{
@@ -462,8 +491,9 @@ strong{
     padding-top: 50px;
 }
 /******************************** Page 8 - Responsive ********************************/
-@media screen and (max-width: 450px){
+@media screen and (max-width: 775px){
     .goal{
+        opacity: 0;
         margin-top: -180px;
         padding: 0px 30px 200px 30px;
     }
@@ -495,8 +525,9 @@ strong{
     padding-bottom: 500px; /* pour laisser de la place au futur témoignages */
 }
 /******************************** Page 9 - Responsive ********************************/
-@media screen and (max-width: 450px){
+@media screen and (max-width: 775px){
     #temoignages{
+        opacity: 0;
         margin-top: 0px;
         padding: 0px 30px 0px 30px;
     }
@@ -562,8 +593,9 @@ strong{
     transition: all 0.3s ease-out;
 }
 /******************************** Page 10 - Responsive ********************************/
-@media screen and (max-width: 450px){
+@media screen and (max-width: 775px){
     #reseaux{
+        opacity: 0;
         padding: 0px 30px 0px 30px;
     }
     #reseaux h1{
