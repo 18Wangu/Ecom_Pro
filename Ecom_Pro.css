@@ -161,6 +161,7 @@ strong{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 100px 0px 100px 0px;
 }
 .votre_reve h2{
     color: #2275ff;
@@ -560,6 +561,6 @@ strong{
         margin-right: 200px;
     }
     .telegram p{
-        margin-bottom: 20px;
+        margin-bottom: 50px;
     }
 }
