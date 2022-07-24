@@ -235,105 +235,62 @@ strong{
 /******************************** Page 5 ********************************/
 #page_formateur{
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    z-index: -1;
 }
-.Staan_formateur{ /* utiliser stiky + relative + absolute pour conserver "je serai votre formateur sous l'image de staan */
-    width: 600px;
+.Staan_formateur{
+    width: 39vw;
 }
 #page_formateur h1{
     color: #2275ff;
-    font-size: 27px;
-    padding-top: 30px;
+    font-size: 2vw;
+    padding-top: 20px;
     padding-bottom: 25px;
 }
 #page_formateur p{
     color: #000726;
-    font-size: 20px;
-}
-.animation_formateur{
-    padding: 0px 150px 0px 150px;
-}
-.animation_formateur h1{
-    color: #000726;
-    font-size: 50px;
-    margin-top: -290px;
-    margin-left: -620px;
-    text-shadow: 1px 1px #e9e9e9;
-    animation: apparition 1s ease-out; /* Voir javascript pour lancer l'animation au scroll*/
-}
-.animation_formateur h2{
-    color: #2275ff;
-    font-size: 40px;
-    margin: -5px 0px 80px 42px;
-    animation: apparition 1s ease-out; /* Voir javascript pour lancer l'animation au scroll*/
-    animation-delay: 0.3s; /* Voir javascript pour lancer l'animation au scroll*/
-}
-@keyframes apparition{ /* Voir javascript pour lancer l'animation au scroll*/
-    from{
-        opacity: 0;
-        transform: translatex(-200px);
-    }
-    to{
-        opacity: 1;
-        transform: translatex(0px);
-    }
+    font-size: 1.5vw;
 }
 /******************************** Page 5 - Responsive ********************************/
+/* Telephone et Tablette */
 @media screen and (max-width: 775px){
     #page_formateur{
-        opacity: 0;
         display: flex;
         flex-wrap: wrap;
-        padding: 50px 30px 0px 30px;
+        justify-content: center;
+    }
+    .Staan_formateur{
+        width: 375px;
     }
     #page_formateur h1{
         color: #2275ff;
         font-size: 27px;
-        padding-top: 570px;
+        padding-top: 450px;
         padding-bottom: 25px;
     }
     #page_formateur p{
         color: #000726;
         font-size: 20px;
     }
-    .Staan_formateur{
-        width: 400px;
-    }
-    .animation_formateur{
-        padding: -50px 0px 0px 0px;
-    }
-    .animation_formateur h1{
-        color: #000726;
-        font-size: 28px;
-        margin-top: -1163px;
-        margin-left: -155px; /* va tr faire foutre, ça veut pas ce mettre sur une ligne. ENCULER*/
-        text-shadow: 1px 1px #e9e9e9;
-    }
-    .animation_formateur h2{
-        color: #2275ff;
-        font-size: 25px;
-        margin-left: -110px;
-    }
 }
 /******************************** Page 6 ********************************/
 #programme{
-    margin-top: -190px;
-    padding: 0px 150px 0px 150px;
+    margin-top: -200px;
 }
 #programme h1{
     color: #2275ff;
     font-size: 90px;
-    margin-left: -350px;
+    text-align: left;
 }
 #programme h2{
     color: #000726;
     font-size: 41px;
-    margin: 5px 0px 0px 0px;
+    text-align: left;
 }
 #programme h3{
     color: #000726;
     font-size: 25px;
-    font-weight: normal;
+    text-align: left;
     margin-bottom: 45px;
 }
 .six_semaines{
@@ -342,15 +299,15 @@ strong{
     justify-content: space-between;
 }
 .semaine{
-    padding-top: 35px;
+    width: 500px;
+    margin: 25px;
 }
 .puce{
     display: flex;
 }
 .puce span{
     padding: 3px 8px 3px 8px;
-    margin-top: -2px;
-    margin-right: 10px;
+    margin: 0px 10px 20px 0px;
     color: white;
     font-weight: bold;
     border: 1px solid #2275ff;
@@ -369,47 +326,35 @@ strong{
 /******************************** Page 6 - Responsive ********************************/
 @media screen and (max-width: 775px){
     #programme{
-        opacity: 0;
-        margin-top: 1070px;
-        padding: 0px 30px 10px 30px;
+        margin-top: 300px;
     }
     #programme h1{
-        color: #2275ff;
         font-size: 50px;
-        margin-left: 0px;
     }
     #programme h2{
-        color: #000726;
-        font-size: 33px;
-        margin: 25px 0px 10px 0px;
+        font-size: 35px;
     }
     #programme h3{
-        color: #000726;
-        font-size: 15px;
-        font-weight: normal;
-        margin-bottom: 15px;
+        font-size: 20px;
+    }
+    .six_semaines{
+        justify-content: center;
+    }
+    .semaine{
+        width: 375px;
     }
     .puce span{
-        padding: 3px 8px 3px 8px;
-        margin-bottom: 40px;
-        margin-top: -2px;
-        margin-right: 10px;
-        color: white;
-        font-weight: bold;
-        border: 1px solid #2275ff;
-        border-radius: 50%;
-        background-color: #2275ff;
+        margin: 0px 10px 40px 0px;
     }
 }
 /******************************** Page 7 ********************************/
 #faq{
     margin-top: -190px;
-    padding: 0px 150px 0px 150px;
 }
 #faq h1{
     color: #000726;
     font-size: 90px;
-    margin-left: -1030px;
+    text-align: left;
     margin-bottom: 30px;
 }
 .afficher_au_clic h2{
@@ -433,130 +378,109 @@ strong{
     border: 1px solid #2275ff;
     background-color: #2275ff;
 }
+.action{
+    padding-top: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 #faq h3{
     color: #000726;
     font-size: 71px;
-    text-align: center;
-    padding: 35px;
-}
-#faq .btn{
-    margin: 0px 520px 80px 520px;
 }
 /******************************** Page 7 - Responsive ********************************/
 @media screen and (max-width: 775px){
     #faq{
-        opacity: 0;
-        padding: 0px 30px 0px 30px;
-    } 
+        margin-top: 200px;
+    }
     #faq h1{
-        color: #000726;
-        font-size: 90px;
-        margin: 0px 0px 30px 0px;
+        font-size: 70px;
     }
     .plus span{
-        padding: 3px 8px 0px 8px; 
-        margin: 0px 10px 90px 0px;
-        color: white;
-        font-weight: bold;
-        border: 1px solid #2275ff;
-        background-color: #2275ff;
+        opacity: 0;
+    }
+    .afficher_au_clic h2{
+        margin-left: -40px;
     }
     #faq h3{
-        color: #000726;
         font-size: 50px;
-        text-align: center;
-        padding: 30px;
-    }
-    #faq .btn{
-        margin: 0px 80px 230px 80px;
     }
 }
 /******************************** Page 8 ********************************/
 .goal{
     margin-top: -180px;
-    padding: 0px 150px 0px 150px;
 }
 .goal h1{
     color: #2275ff;
-    font-size: 80px;
-    margin-left: -40px;
+    font-size: 90px;
+    text-align: left;
 }
 .goal h2{
     color: #000726;
     font-size: 41px;
+    text-align: left;
 }
 .goal p{
     color: #000726;
-    font-size: 20px;
-    padding-top: 50px;
+    font-size: 25px;
+    text-align: left;
+    margin-bottom: 45px;
 }
 /******************************** Page 8 - Responsive ********************************/
 @media screen and (max-width: 775px){
     .goal{
-        opacity: 0;
-        margin-top: -180px;
-        padding: 0px 30px 200px 30px;
+        margin-top: 230px;
     }
     .goal h1{
-        color: #2275ff;
-        font-size: 45px;
-        margin-left: 0px;
+        font-size: 50px;
     }
     .goal h2{
-        color: #000726;
-        font-size: 30px;
-        text-align: center;
+        font-size: 35px;
+    }
+    .goal p{
+        font-size: 20px;
     }
 }
 /******************************** Page 9 ********************************/
 #temoignages{
-    margin-top: -80px;
-    padding: 0px 150px 0px 150px;
+    margin-top: -180px;
 }
 #temoignages h1{
     color: #2275ff;
     font-size: 80px;
-    margin-left: -470px;
+    text-align: left;
 }
 #temoignages h2{
     color: #000726;
     font-size: 41px;
-    margin-top: -10px;
-    padding-bottom: 500px; /* pour laisser de la place au futur témoignages */
+    text-align: left;
 }
 /******************************** Page 9 - Responsive ********************************/
 @media screen and (max-width: 775px){
     #temoignages{
-        opacity: 0;
-        margin-top: 0px;
-        padding: 0px 30px 0px 30px;
+        margin-top: 220px;
     }
     #temoignages h1{
-        color: #2275ff;
         font-size: 50px;
-        margin-left: 0px;
     }
     #temoignages h2{
-        color: #000726;
-        font-size: 30px;
-        text-align: center;
-        padding-bottom: 380px; /* pour laisser de la place au futur témoignages */
+        font-size: 35px;
     }
 }
 /******************************** Page 10 ********************************/
 #reseaux{
-    margin-top: -420px;
-    padding: 0px 150px 0px 150px;
+    margin-top: -100px;
 }
 #reseaux h1{
     color: #2275ff;
     font-size: 90px;
-    margin-left: -750px;
+    text-align: left;
 }
 #reseaux h2{
     color: #000726;
     font-size: 41px;
-    margin-top: -15px;
+    text-align: left;
 }
 .reseaux_sociaux{
     display: flex;
@@ -576,11 +500,10 @@ strong{
 .btn_reseau{
     border: 1px solid #2275ff;
     padding: 15px;
-    margin-right: 200px;
-    margin-bottom: 250px;
     text-align: center;
     background-color: #2275ff;
     box-shadow: 3px 3px 15px #2275ff, 3px 3px 15px #2275ff;
+    min-width: max-content;
 }
 .btn_reseau a{
     color: white;
@@ -592,49 +515,51 @@ strong{
     color: #000726;
     transition: all 0.3s ease-out;
 }
+.instagram p{
+    margin-bottom: 25px;
+}
+.telegram p{
+    margin-bottom: 45px;
+}
+.mail{
+    margin-bottom: 100px;
+}
 /******************************** Page 10 - Responsive ********************************/
-@media screen and (max-width: 775px){
+/* Telephone */
+@media screen and (max-width: 450px){
     #reseaux{
-        opacity: 0;
-        padding: 0px 30px 0px 30px;
+        margin-top: 250px;
     }
     #reseaux h1{
-        color: #2275ff;
         font-size: 50px;
-        margin-left: 0px;
     }
     #reseaux h2{
-        color: #000726;
-        font-size: 30px;
-        text-align: center;
-        margin-top: 15px;
-        padding-bottom: 250px;
+        font-size: 35px;
     }
     .reseaux_sociaux{
-        display: flex;
         flex-wrap: wrap;
-        align-items: center;
-    }
-    .reseaux_sociaux h3{
-        padding-bottom: 10px;
-        color: #2275ff;
-        font-size: 27px;
-        text-align: center;
-        margin-top: -270px;
-    }
-    .reseaux_sociaux p{
-        color: #000726;
-        font-size: 20px;
-        padding-bottom: 5px;
         text-align: center;
     }
-    .btn_reseau{
-        border: 1px solid #2275ff;
-        padding: 15px;
+}
+/* Tablette */
+@media screen and (min-width: 451px) and (max-width: 775px){
+    #reseaux{
+        margin-top: 250px;
+    }
+    #reseaux h1{
+        font-size: 50px;
+    }
+    #reseaux h2{
+        font-size: 35px;
+    }
+    .reseaux_sociaux{
+        flex-wrap: wrap;
         text-align: center;
-        background-color: #2275ff;
-        box-shadow: 3px 3px 15px #2275ff, 3px 3px 15px #2275ff;
-        margin-right: 50px;
-        margin-left: 50px;
+    }
+    .instagram{
+        margin-right: 200px;
+    }
+    .telegram p{
+        margin-bottom: 20px;
     }
 }
