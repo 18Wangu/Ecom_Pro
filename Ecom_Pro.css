@@ -13,30 +13,150 @@ body{
     font-family: 'Archivo narrow', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 /******************************** Barre de navigation ********************************/
-nav{
+.pc_screen{
+    left: 0;
+    z-index: 100;
     position: fixed;
     display: flex;
     justify-content: space-between;
-    padding: 20px 150px 5px 0px;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    padding-right: 6%;
     width: 100%;
     background-color: #e9e9e9; 
+}
+.logo img{
+    margin-left: 20px;
 }
 ul{
     list-style-type: none;
     display: flex;
-    padding-top: 15px;
 }
-li a{
+.pc_screen li a{
     font-size: 18px;
     color: #2275ff;
     text-decoration: none;
     padding: 0px 40px 0px 0px;
 }
-li a:hover{
+.pc_screen li a:hover{
     color: #000726;
     text-decoration: underline #000726;
-    text-underline-offset: 45px;
+    text-underline-offset: 32px;
     transition: all 0.3s ease-out;
+}
+.nav_burger{
+    display: none;
+}
+.navigationCheckbox {
+    display: none;
+}
+/******************************** nav burger ********************************/
+/* Telephone et Tablette */
+@media screen and (max-width: 775px)
+{
+    .pc_screen{
+        align-items: flex-start;
+    }
+    .nav_burger{
+        display: block;
+    }
+    .pc_screen li{
+        display: none;
+    }
+    .logo img{
+        margin-top: -10px;
+    }
+    .lien_burger{
+        z-index: 20;
+        width: 100%;
+        height: 105vh;
+        position: fixed;
+        left: 0;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(5px);
+    }
+    .lien_burger li{
+        padding-top: 25px;
+    }
+    .lien_burger a{
+        font-size: 2.3em;
+        color: #2275ff;
+        text-decoration: none;
+        text-shadow: 1px 1px 2px #000726;
+    }
+    .lien_burger li a:hover{
+        color: #000726;
+        transition: all 0.3s ease-out;
+    }
+    /* Design du bouton burger */
+    .navigationBtn {
+        height: 4.5rem;
+        width: 4.5rem;
+        position: fixed;
+        top: 0.35rem;
+        right: 0.35rem;
+        z-index: 100;
+        cursor: pointer;
+    }
+    .navigationIcon {
+        position: relative;
+        margin-top: 2.3rem;
+        width: 3rem;
+        height: 2px;
+        background-color: #000726;
+        display: inline-block;
+    }
+    .navigationIcon::before,
+    .navigationIcon::after {
+        width: 3rem;
+        height: 2px;
+        background-color: #000726;
+        display: inline-block;
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all .2s;
+    }
+    .navigationIcon::before {
+        top: -.8rem;
+    }
+    .navigationIcon::after {
+        top: .8rem;
+    }
+    /* Au clic du burger*/
+    .navigationCheckbox:checked ~ .lien_burger{
+        opacity: 1;
+        animation: apparition 0.3s ease-out;
+    }
+    .navigationCheckbox:checked+ .navigationBtn .navigationIcon {
+        background-color: transparent;
+    }
+    .navigationCheckbox:checked+ .navigationBtn .navigationIcon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+    .navigationCheckbox:checked+ .navigationBtn .navigationIcon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+    @keyframes apparition
+    {
+        from{
+            opacity: 0;
+            transform: translatex(600px);
+        }
+        to{
+            opacity: 1;
+            transform: translatex(0px);
+        }
+    }
+    /* Au clic d'un lien*/
+    
 }
 /******************************** Page 1 ********************************/
 .page1{
@@ -82,11 +202,6 @@ strong{
 /******************************** Page 1 - Responsive ********************************/
 /* Telephone et Tablette */
 @media screen and (max-width: 775px){
-    /* temporaire(a enlever apres nav buger faite */
-    nav{
-        opacity: 0;
-    }
-    /* */
     .page1{
         display: flex;
         flex-direction: column;
@@ -450,6 +565,15 @@ strong{
     color: #000726;
     font-size: 41px;
     text-align: left;
+    padding-bottom: 30px;
+}
+.flyers_profil{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.flyers_profil img{
+    padding-bottom: 15px;
 }
 /******************************** Page 9 - Responsive ********************************/
 @media screen and (max-width: 775px){
