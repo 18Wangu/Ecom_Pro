@@ -156,7 +156,6 @@ ul{
         }
     }
     /* Au clic d'un lien*/
-    
 }
 /******************************** Page 1 ********************************/
 .page1{
@@ -282,14 +281,18 @@ strong{
     font-size: 20px;
 }
 /******************************** Page 3 - Responsive ********************************/
-/******************************** Page 4 ********************************/
-#avantages{
-    margin-top: -200px;
+/* Tablette */
+@media screen and (min-width: 451px) and (max-width: 775px){
+    .votre_reve{
+        padding: 100px 0px 250px 0px;
+    }
 }
+/******************************** Page 4 ********************************/
 #avantages h1{
     color: #2275ff;
     font-size: 90px;
     text-align: left;
+    padding-top: 80px;
 }
 #avantages h2{
     color: #000726;
@@ -319,7 +322,7 @@ strong{
 /* Telephone */
 @media screen and (max-width: 450px){
     #avantages{
-        margin-top: 200px;
+        margin-top: 350px;
     }
     #avantages h1{
         color: #2275ff;
@@ -343,21 +346,26 @@ strong{
     }
 }
 /******************************** Page 5 ********************************/
-#page_formateur{
+#page_formateur h1{
+    color: #2275ff;
+    font-size: 90px;
+    text-align: left;
+    padding-top: 80px;
+}
+.formateur{
     display: flex;
-    align-items: center;
     z-index: -1;
 }
 .Staan_formateur{
     width: 39vw;
 }
-#page_formateur h1{
+.formateur h2{
     color: #2275ff;
     font-size: 2vw;
-    padding-top: 20px;
+    padding-top: 0;
     padding-bottom: 25px;
 }
-#page_formateur p{
+.formateur p{
     color: #000726;
     font-size: 1.5vw;
 }
@@ -365,29 +373,36 @@ strong{
 /* Telephone et Tablette */
 @media screen and (max-width: 775px){
     #page_formateur{
+        padding-top: 200px;
+    }
+    #page_formateur h1{
+        padding-top: 300px;
+        color: #2275ff;
+        font-size: 53px;
+    }
+    .formateur{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
     .Staan_formateur{
+        padding-top: 30px;
         width: 375px;
     }
-    #page_formateur h1{
+    .formateur h2{
         color: #2275ff;
         font-size: 27px;
-        padding-top: 450px;
+        padding-top: 30px;
         padding-bottom: 25px;
     }
-    #page_formateur p{
+    .formateur p{
         color: #000726;
         font-size: 20px;
     }
 }
 /******************************** Page 6 ********************************/
-#programme{
-    margin-top: -200px;
-}
 #programme h1{
+    padding-top: 80px;
     color: #2275ff;
     font-size: 90px;
     text-align: left;
@@ -436,7 +451,7 @@ strong{
 /******************************** Page 6 - Responsive ********************************/
 @media screen and (max-width: 775px){
     #programme{
-        margin-top: 300px;
+        margin-top: 400px;
     }
     #programme h1{
         font-size: 50px;
@@ -458,10 +473,8 @@ strong{
     }
 }
 /******************************** Page 7 ********************************/
-#faq{
-    margin-top: -190px;
-}
 #faq h1{
+    padding-top: 80px;
     color: #000726;
     font-size: 90px;
     text-align: left;
@@ -502,7 +515,7 @@ strong{
 /******************************** Page 7 - Responsive ********************************/
 @media screen and (max-width: 775px){
     #faq{
-        margin-top: 200px;
+        margin-top: 300px;
     }
     #faq h1{
         font-size: 70px;
@@ -518,10 +531,8 @@ strong{
     }
 }
 /******************************** Page 8 ********************************/
-.goal{
-    margin-top: -180px;
-}
 .goal h1{
+    padding-top: 80px;
     color: #2275ff;
     font-size: 90px;
     text-align: left;
@@ -540,7 +551,7 @@ strong{
 /******************************** Page 8 - Responsive ********************************/
 @media screen and (max-width: 775px){
     .goal{
-        margin-top: 230px;
+        margin-top: 420px;
     }
     .goal h1{
         font-size: 50px;
@@ -553,10 +564,8 @@ strong{
     }
 }
 /******************************** Page 9 ********************************/
-#temoignages{
-    margin-top: -180px;
-}
 #temoignages h1{
+    padding-top: 80px;
     color: #2275ff;
     font-size: 80px;
     text-align: left;
@@ -578,7 +587,7 @@ strong{
 /******************************** Page 9 - Responsive ********************************/
 @media screen and (max-width: 775px){
     #temoignages{
-        margin-top: 220px;
+        margin-top: 420px;
     }
     #temoignages h1{
         font-size: 50px;
@@ -588,10 +597,11 @@ strong{
     }
 }
 /******************************** Page 10 ********************************/
-#reseaux{
-    margin-top: -100px;
+footer{
+    padding-bottom: 100px;
 }
 #reseaux h1{
+    padding-top: 80px;
     color: #2275ff;
     font-size: 90px;
     text-align: left;
@@ -603,7 +613,7 @@ strong{
 }
 .reseaux_sociaux{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .reseaux_sociaux h3{
     padding-top: 70px;
@@ -647,7 +657,7 @@ strong{
 /* Telephone */
 @media screen and (max-width: 450px){
     #reseaux{
-        margin-top: 250px;
+        margin-top: 350px;
     }
     #reseaux h1{
         font-size: 50px;
@@ -658,12 +668,13 @@ strong{
     .reseaux_sociaux{
         flex-wrap: wrap;
         text-align: center;
+        justify-content: center;
     }
 }
 /* Tablette */
 @media screen and (min-width: 451px) and (max-width: 775px){
     #reseaux{
-        margin-top: 250px;
+        margin-top: 380px;
     }
     #reseaux h1{
         font-size: 50px;
@@ -674,6 +685,7 @@ strong{
     .reseaux_sociaux{
         flex-wrap: wrap;
         text-align: center;
+        justify-content: center;
     }
     .instagram{
         margin-right: 200px;
